@@ -28,9 +28,9 @@ def image_processing(args):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     gray = cv2.medianBlur(gray, 3)
     print(gray)
-    #gray=cv2.Canny(gray,100,200)
-    #print("after canny")
-    #print(gray)
+    gray=cv2.Canny(gray,100,200)
+    print("after canny")
+    print(gray)
     #writing to new file
     filename = "{}.png".format(os.getpid())
     cv2.imwrite(filename, gray)
